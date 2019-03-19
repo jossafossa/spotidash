@@ -1,9 +1,10 @@
 <?php 
 	function init_api() {
+		global $redirect_uri;
 		session_start();
 
 		if (!isset($_SESSION["code"])) {
-			header("location: http://localhost/spotidash/auth.php");
+			header("location: " . $redirect_uri);
 		}
 
 		$code = $_SESSION["code"];

@@ -1,17 +1,9 @@
 <?php 
+	include "settings.php";
+
 	session_start();
 	// api settings
-	$client_id = 'f8c1676b7739450daf60050339b297b5';
-	$client_secret = '6fa89bf4e01243d38414cee037b074e0';
-	$redirect_uri = 'http://localhost/spotidash/auth.php';
-	$scope = [
-		"user-read-email", 
-		"user-read-currently-playing", 
-		"user-read-playback-state",
-		"user-modify-playback-state",
-		"user-read-recently-played"
-	];
-	$scope = join("%20", $scope); // convert array to querystring
+	
 	/////////////////////////////////////////////////////////////////////////
 	// GET CODE
 	/////////////////////////////////////////////////////////////////////////
@@ -49,5 +41,5 @@
 	$_SESSION["refresh_token"] = $refresh_token;
 	$_SESSION["expires_in"] = $expires_in;
 
-	header("refresh:0.1;url=http://localhost/spotidash/")
+	header("refresh:0.1;url=" . $url)
 ?>
