@@ -4,7 +4,10 @@
 <div class="dashboard">
 	<div class="top-menu"><!-- <div class="round-button toggle-visualizer"></div> --></div>
 	<div class="container">
-		<img src="" alt="" class="image">
+		<div class="image_ascpect-ratio">			
+			<div class="image">	
+			</div>		
+		</div>
 		<h1 class="title"></h1>
 		<h2 class="artist"></h2>
 		<h2 class="album"></h2>
